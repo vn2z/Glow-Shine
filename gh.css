@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Cardo', sans-serif; 
+}
+
+body {
+  min-height: 100vh;
+  background: url("foto/0000-_Cadastro.png") center top / cover no-repeat fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.login-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  width: 340px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+  position: relative;
+  top: 0px;
+  box-sizing: border-box;
+  top: 100px;
+}
+
+.login-container h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.login-container h2 {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 7px 9px;
+  margin: 5px 0;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ffffff;
+  color: #000000;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-container input:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 5px rgba(214, 51, 132, 0.4);
+}
+
+button#loginBtn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background-color: white;
+  color: #d63384;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+button#loginBtn:hover {
+  background: linear-gradient(90deg, #ff4da6, #d63384);
+  color: black;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(214, 51, 132, 0.3);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 4px;
+}
+
+.links a {
+  color: #d63384;
+  text-decoration: underline;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #ff4da6;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 18px;
+    width: 280px;
+  }
+
+  .login-container h1 {
+    font-size: 20px;
+  }
+}
+

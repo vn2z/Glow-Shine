@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glow&Shine - Carrinho</title>
+    <link rel="stylesheet" href="carrinho.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="retangulo">
+            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+            <div class="logo">
+                <a href="index.html"><img src="foto/logo.png" alt="logo"></a>
+            </div>
+            <div class="barra-pesquisa">
+                <input type="text" placeholder="Pesquisar">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="icons-right">
+                <i class="fas fa-bag-shopping"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+        <div class="retangulo2"></div>
+        <nav class="menu">
+            <p onclick="location.href='promocoes.html'">Promoções</p>
+            <p onclick="location.href='maquiagem.html'">Maquiagem</p>
+            <p onclick="location.href='perfumaria.html'">Perfumaria</p>
+            <p onclick="location.href='skincare.html'">SkinCare</p>
+            <p onclick="location.href='cabelos.html'">Cabelos</p>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo">Carrinho</h2>
+
+        <div class="carrinho-container">
+            <div id="lista-produtos-carrinho" class="lista-produtos-carrinho">
+
+                <div class="carrinho-item">
+                    <input type="checkbox" class="item-checkbox" checked>
+                    <div class="item-imagem"><img src="foto/lapis.png" alt="Base Líquida Glow"></div>
+                    <div class="item-detalhes">
+                        <h3>Base Líquida Glow</h3>
+                        <p>ID: 1</p>
+                    </div>
+                    <div class="item-preco">R$ 59,90</div>
+                    <div class="item-quantidade">
+                        <button onclick="alterarQtd(1, -1)">-</button>
+                        <span>1</span>
+                        <button onclick="alterarQtd(1, 1)">+</button>
+                    </div>
+                    <i class="fas fa-trash item-remover" onclick="remover(1)"></i>
+                </div>
+
+                <div class="carrinho-item">
+                    <input type="checkbox" class="item-checkbox" checked>
+                    <div class="item-imagem"><img src="foto/Perfumaria/Perfumaria/3.png" alt="Batom Matte"></div>
+                    <div class="item-detalhes">
+                        <h3>Batom Matte</h3>
+                        <p>ID: 2</p>
+                    </div>
+                    <div class="item-preco">R$ 39,90</div>
+                    <div class="item-quantidade">
+                        <button onclick="alterarQtd(2, -1)">-</button>
+                        <span>1</span>
+                        <button onclick="alterarQtd(2, 1)">+</button>
+                    </div>
+                    <i class="fas fa-trash item-remover" onclick="remover(2)"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="resumo-carrinho-fixo">
+            <div class="resumo-content">
+                <div class="selecao-total">
+                    <input type="checkbox" id="selecionar-tudo" checked>
+                    <label id="label-selecionar-tudo" for="selecionar-tudo">Selecionar Tudo</label>
+                </div>
+                <div class="cupom-area">
+                    <select>
+                        <option selected>Selecionar Cupom</option>
+                        <option>10% OFF</option>
+                        <option>Frete Grátis</option>
+                    </select>
+                </div>
+                <div class="total-area">
+                    <p>Total:</p>
+                    <p id="valor-total" class="valor-total">R$ 0,00</p>
+                </div>
+                <button class="botao-continuar">Continuar</button>
+            </div>
+        </div>
+
+        <section class="veja-tambem">
+            <h2>Veja Também</h2>
+
+            <div class="quadrados-container">
+                <div class="quadrado">
+                    <img src="foto/Maquiagens/Maquiagens/1.png" alt="Shampoo Sólido">
+                    <div class="quadrado-conteudo">
+                        <h3>Shampoo Sólido</h3>
+                        <p class="descricao-sugerida">Fórmula ultra-hidratante para brilho e maciez dos seus fios. Fortalece a raiz e evita a quebra.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 55,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Perfumaria/Perfumaria/1.png" alt="Kit Revitalizante">
+                    <div class="quadrado-conteudo">
+                        <h3>Kit Revitalizante</h3>
+                        <p class="descricao-sugerida">Creme + Sérum facial. Reduz linhas de expressão e uniformiza o tom da pele.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 135,00</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Maquiagens/Maquiagens/3.png" alt="Perfume Bella">
+                    <div class="quadrado-conteudo">
+                        <h3>Perfume Bella</h3>
+                        <p class="descricao-sugerida">Fragrância exclusiva com notas de jasmim, rosas e toque amadeirado. Alta fixação e elegância.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 180,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/azull.png" alt="Gloss Volume">
+                    <div class="quadrado-conteudo">
+                        <h3>Gloss Volume</h3>
+                        <p class="descricao-sugerida">Efeito preenchedor instantâneo. Pigmentação intensa e brilho 3D sem deixar a boca pegajosa.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 69,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Skin Care/Skin Care/1.png" alt="Manteiga Corporal">
+                    <div class="quadrado-conteudo">
+                        <h3>Manteiga Corporal</h3>
+                        <p class="descricao-sugerida">Hidratação profunda por 48h. Com Manteiga de Karité e Vitamina E. Ideal para peles secas.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 75,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Cabelos/Cabelos/1.png" alt="Base Matte HD">
+                    <div class="quadrado-conteudo">
+                        <h3>Base Matte HD</h3>
+                        <p class="descricao-sugerida">Fórmula de longa duração e alta cobertura. Controla a oleosidade e resiste à água e ao suor.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 90,00</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Maquiagens/Maquiagens/6.png" alt="Tônico Facial">
+                    <div class="quadrado-conteudo">
+                        <h3>Tônico Facial</h3>
+                        <p class="descricao-sugerida">Equilibra o pH da pele e prepara para a hidratação. Reduz poros e minimiza a vermelhidão.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 49,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quadrado">
+                    <img src="foto/Maquiagens/Maquiagens/12.png" alt="Máscara Capilar">
+                    <div class="quadrado-conteudo">
+                        <h3>Máscara Capilar</h3>
+                        <p class="descricao-sugerida">Repara e nutre profundamente os fios em apenas 5 minutos. Com queratina e óleos essenciais.</p>
+                        <div class="preco-area">
+                            <p class="preco-sugerido">R$ 105,90</p>
+                            <i class="fas fa-heart like-sugerido"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+         <footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h4>Saiba Mais:</h4>
+            <ul>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Segurança em compras</a></li>
+                <li><a href="#">Protocolo do Site</a></li>
+                <li><a href="#">Entregas e Reembolsos</a></li>
+                <li><a href="#">Perguntas Frequentes</a></li>
+                <li><a href="#">Página de Sugestões</a></li>
+                <li><a href="#">Sobre a Empresa</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Fale conosco:</h4>
+            <p><strong>E-mail:</strong> glow.shine@gmail.com</p>
+            <p><strong>Instagram:</strong> @glow&shine</p>
+            <p><strong>Contato:</strong> (55) 17 98100-8508</p>
+            <p><strong>Telefone:</strong> (XX) XXXXXX</p>
+            <div class="app-info">
+                <p><strong>Baixe nosso App!</strong></p>
+                <p>Disponível para Android, iOS, Mac e Windows</p>
+                <img src="foto/qrcode2.png" alt="QR Code" class="qrcode">
+            </div>
+        </div>
+        <div class="footer-column contact-form">
+            <h4>Precisando de Ajuda?</h4>
+            <form action="#">
+                <input type="email" placeholder="Email" class="email-input">
+                <textarea placeholder="Escreva sua Dúvida e tentaremos soluciona-la"></textarea>
+                <button type="submit" class="send-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+</footer>
+    </main>
+
+    <script src="carrinho.js"></script>
+</body>
+</html>

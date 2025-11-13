@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenLock - Cadastro</title>
+    <link rel="stylesheet" href="cadastrar.css">
+</head>
+<body>
+    <div class="register-container" id="registerBox">
+        <img class="logo" src="foto/OnlyLogo.png" alt="Logo">
+        <form>
+            <h2>Criar Conta</h2>
+
+            <input type="text" placeholder="Usuário">
+            <input type="email" placeholder="E-mail">
+            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Confirmar senha">
+
+            <button type="submit" onclick="location.href='login.html'; return false;">Cadastrar</button>
+            <button type="button" class="back-login" onclick="location.href='login.html';">
+                Já tenho uma conta
+            </button>
+        </form>
+    </div>
+
+    <script src="cadastrar.js"></script>
+</body>
+</html>

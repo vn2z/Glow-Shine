@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScreenLock - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container" id="loginBox">
+        <img class="logo" src="foto/OnlyLogo.png" alt="Logo">
+        <form>
+            <h2>Entrar</h2>
+            <input type="text" placeholder="Usuário">
+            <input type="password" placeholder="Senha">
+            <a href="esqueci.html" class="forgot-password">Esqueci a senha</a>
+            <button type="submit" onclick="location.href='index.html'; return false;">Entrar</button>
+            <button type="button" class="google-login">
+                <img src="foto/google-color.png" alt="Google Logo">
+                Entrar com Google
+            </button>
+            <button type="button" class="register-button" onclick="location.href='cadastrar.html';">Cadastrar-se</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
