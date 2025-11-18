@@ -1,0 +1,35 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tela fullscreen com imagem de carregamento */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Evita scroll */
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Imagem de alta qualidade, cobrindo toda tela */
+    background: url("foto/foto\ screenlock.png") no-repeat center center;
+    background-size: cover;
+
+    /* Suaviza a renderização da imagem */
+    image-rendering: auto; /* pode usar 'crisp-edges' se for pixel art */
+    transform: translateZ(0); /* Força a GPU a renderizar */
+}
+
+/* Fade-out suave */
+body.fade-out {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}

@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #faeaf1; 
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 2. HEADER - Topo (Retângulo Magenta) */
+.retangulo {
+    /* Cor magenta forte do topo da imagem */
+    background: #cb297e; 
+    display: flex;
+    align-items: center;
+    padding: 8px 20px; 
+    color: #ffffff;
+    height: 60px;
+}
+
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.logo img {
+    height: 40px;
+}
+
+/* Barra de Pesquisa */
+.barra-pesquisa {
+    position: relative;
+    flex-grow: 1; 
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    height: 38px;
+}
+
+.barra-pesquisa i {
+    position: absolute;
+    right: 15px; 
+    top: 50%;
+    transform: translateY(-50%);
+    /* Cor rosa do ícone */
+    color: #cb297e; 
+    cursor: pointer;
+}
+
+.icons-right {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.icons-right img{
+    width: 22px;
+    height: 20px;
+    position: relative;
+    bottom: 1px;
+    filter: brightness(0) invert(1);
+}
+.icons-right i {
+    cursor: pointer;
+}
+
+/* 3. NAV - Menu de Categorias */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background: #ffffff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    height: auto;
+    gap: 0;
+}
+
+.menu p {
+    cursor: pointer;
+    font-weight: 500;
+    /* Cor de texto secundário */
+    color: #666666; 
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/* Classe ativa usada nas páginas de produto para destacar a categoria atual */
+.menu .active { 
+    /* Cor magenta forte */
+    color: #cb297e;
+    font-weight: 600;
+}
+
+/* 4. Título da Seção */
+.titulo {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin: 40px 0 25px 0;
+    font-size: 28px;
+    font-weight: 400;
+    color: #333333;
+}
+
+/* 5. GRID de Produtos (Cards) */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image-container {
+    /* Fundo das imagens com a cor rosa claríssima */
+    background-color: #faeaf1; 
+    height: 250px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image-container img {
+    height: 100%; 
+    width: auto;
+    object-fit: contain; 
+}
+
+.card-content {
+    /* Fundo rosa claro da área de texto */
+    background-color: #f8e5ee; 
+    padding: 15px;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    flex-grow: 1;
+}
+
+.card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333333;
+    margin: 0 0 5px 0;
+}
+
+.descricao {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.3;
+    margin: 5px 0 10px 0;
+    min-height: 35px;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #666666;
+    font-size: 12px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.preco {
+    font-weight: 600;
+    font-size: 16px;
+    /* Cor do preço em destaque é o magenta primário */
+    color: #cb297e; 
+    line-height: 1.1;
+    margin: 3px 0 0 0;
+}
+
+.like {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 20px;
+    /* Cor do coração é o magenta primário */
+    color: #cb297e;
+    cursor: pointer;
+}
+
+/* 6. Footer (Mantendo o estilo padronizado) */
+footer {
+    background-color: #ff66aa; 
+    color: #333333;
+    padding: 40px 60px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h4 {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.app-info {
+    margin-top: 20px;
+}
+
+.qrcode {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+    border: 3px solid rgb(207, 207, 207);
+    border-radius: 5px;
+}
+
+.contact-form {
+    /* Fundo do formulário */
+    background: #f7e0ed; 
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.send-button {
+    width: 100%;
+    padding: 10px;
+    /* Botão com a cor magenta primária */
+    background: #cb297e;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.send-button:hover {
+    background-color: #d11a58;
+}
+
+/* 7. Responsividade */
+@media (max-width: 1024px) {
+    .grid-produtos {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .retangulo {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+    .barra-pesquisa {
+        order: 3;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+    .icons-right {
+        order: 2;
+        margin-left: auto;
+    }
+    .menu-icon {
+        order: 1;
+    }
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    .footer-column {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-produtos {
+        grid-template-columns: 1fr; 
+    }
+    .logo {
+        order: 4; 
+    }
+}
